@@ -13,8 +13,7 @@ Cypress.Commands.add("login", (usuario, senha) => {
     cy.contains("3º Bimestre").click();
     cy.get('[title="EF - 5A - 5º ANO - Regência de Classe Fund I - 5H"]').should(
       "contain",
-      "EF - 5A - 5º ANO"
-    );
+      "EF - 5A - 5º ANO");
     cy.get(".ant-table-row > :nth-child(4)").click();
     cy.wait(confTimeOut);
     cy.get('.ant-tabs-tabpane-active > .ant-row > .ant-col > .sc-fjdhpX > .ant-spin-nested-loading > .ant-spin-container > .sc-kjoXOD > .overflow-hidden > .ant-select-selection > .ant-select-selection__rendered > .ant-select-selection__placeholder')
@@ -25,4 +24,5 @@ Cypress.Commands.add("login", (usuario, senha) => {
     )
       .should("contain", "AGATHA SARA CAMILO DUARTE")
       .should("be.visible");
+      cy.get('#SGP_BUTTON_SAIR > .sc-kPVwWT').click()
   });

@@ -8,8 +8,7 @@ Cypress.Commands.add("login", (usuario, senha) => {
     cy.contains("Diário de Classe").click();
     cy.get("#link-228").click(220, 34, { force: true });
     cy.wait(confTimeOut);
-    cy.get("#SGP_SELECT_BIMESTRE > div > span > i").click();
-  
+    cy.get("#SGP_SELECT_BIMESTRE > div > span > i").click();  
     cy.contains("3º Bimestre").click();
     cy.get('[title="EF - 5A - 5º ANO - Regência de Classe Fund I - 5H"]').should(
       "contain",
